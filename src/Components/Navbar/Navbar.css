@@ -1,0 +1,180 @@
+/* ================= NAVBAR ================= */
+
+.Navbar {
+    height: 66px;  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    padding: 0 25px;
+    background-color: #ffffffd9;
+    backdrop-filter: blur(6px);
+
+    z-index: 1000;
+    transition: 0.4s ease;
+}
+
+/* Scroll Effect */
+.Navbar.scrolled {
+    background-color: #ffffff;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* ================= LOGO ================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    display: block;
+
+    /* COLOR CONTROL */
+    filter: brightness(0) saturate(100%);
+}
+
+/* ================= NAV LINKS ================= */
+
+.list {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.list li {
+    list-style: none;
+}
+
+.list li a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-weight: 400;
+    position: relative;
+    padding: 4px 0;
+}
+
+/* Underline Animation */
+.list li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: 0.3s;
+}
+
+.list li a:hover::after {
+    width: 100%;
+}
+
+/* ================= REGISTER BUTTON ================= */
+
+.reg button {
+    height: 38px;
+    width: 130px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    background: black;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.reg button:hover {
+    background: rgb(125, 50, 255);
+}
+
+/* ================= HAMBURGER ================= */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: black;
+    transition: 0.4s;
+}
+
+/* Hamburger Animation */
+.hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Hide mobile register on desktop */
+.mobile-reg {
+    display: none;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .list {
+        position: absolute;
+        top: 66px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: white;
+        padding: 30px 0;
+        gap: 20px;
+
+        transform: translateY(-150%);
+        opacity: 0;
+        transition: 0.4s ease;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .list.active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .reg {
+        display: none;
+    }
+
+    .mobile-reg {
+        display: block;
+    }
+
+    .mobile-reg button {
+        height: 40px;
+        width: 140px;
+        border-radius: 40px;
+        border: none;
+        background: black;
+        color: white;
+        font-weight: 500;
+        cursor: pointer;
+    }
+}

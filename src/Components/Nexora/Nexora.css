@@ -1,0 +1,55 @@
+
+/* Body */
+
+
+/* Hero Section */
+.hero {
+  height: 100svh; /* Better mobile viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 20px;
+}
+
+/* Logo Text */
+.logo {
+  font-size: clamp(80px, 20vw, 500px); /* Fully responsive */
+  font-weight: bolder;
+  background: linear-gradient(to right, #00ffd5, #002bff, #8a00ff, #ff00c8, #ff0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-family: 'ALLURA', sans-serif;
+
+  line-height: 1;
+  white-space: nowrap; /* Prevent breaking */
+}
+
+/* X Letter */
+.x-letter {
+  -webkit-text-fill-color: #000;
+  display: inline-block;
+  transition: transform 0.1s linear;
+  font-family: 'ALLURA', sans-serif;
+
+}
+
+/* Optional Hover Effect */
+.x-letter:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Tablet Adjustments */
+@media (max-width: 768px) {
+  .logo {
+    font-size: clamp(60px, 25vw, 250px);
+  }
+}
+
+/* Small Mobile Adjustments */
+@media (max-width: 480px) {
+  .logo {
+    font-size: clamp(50px, 30vw, 150px);
+  }
+}

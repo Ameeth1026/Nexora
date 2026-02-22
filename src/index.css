@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Anton&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  margin: 0%;
+  padding: 0%;
+    list-style: none;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+}
+.container{
+  /* remove fixed viewport height so page can scroll */
+  /* height: 100vh; */
+  min-height: 100vh; /* at least one screen tall */
+  width: 100%;
+  overflow-x: hidden;
+  background: linear-gradient(120deg, #ffffff,#dbdbdb);
+}
