@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./SideNav.css";
+import Assets from "../../assets/Assets";
 
 const SidebarItem = ({ icon: Icon, label, path, children }) => {
   const location = useLocation();
@@ -47,7 +48,7 @@ export default function SideNav({ onLogout, onProfileClick }) {
       <div>
         {/* Logo */}
         <div className="sidebar-logo">
-          <img src="./Public/lOG_back.png" alt="Nexora Logo" width={50} height={50} />
+          <img src={Assets.logBack} alt="Nexora Logo" width={50} height={50} />
           <h1>Nexora</h1>
         </div>
 

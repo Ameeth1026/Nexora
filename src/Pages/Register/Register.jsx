@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Register.css";
+import Assets from "../../assets/Assets";
 
 const Register = () => {
   const [isLogin, setIsLogin] = useState(false);
@@ -117,7 +118,7 @@ const Register = () => {
 
       <div className="right-side">
         <div className="card">
-          <img src="/auth.png" alt="" />
+          <img src={Assets.auth} alt="Auth" />
         </div>
       </div>
     </div>
